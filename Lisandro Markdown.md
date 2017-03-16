@@ -1,10 +1,10 @@
-##Preparing the environment, cleaning the data for Stacks
+Preparing the environment, cleaning the data for Stacks
 
 **1**. First, we will create a set of directories to place data in. At each step of the analysis, we will transform the data moving it from the `raw/` to `samples/` to `stacks/`.
 
-    	~/tutorial% mkdir raw samples stacks
+    ~/tutorial% mkdir raw samples stacks
    	~/tutorial% ls
-   	 raw/  samples/  stacks/
+   	raw/  samples/  stacks/
 
 **2**. We will assume that you have placed the raw sequencing data into the `raw/` directory. If you are using the raw files output by the BUSTARD part of the pipeline your data will look like this:
 
