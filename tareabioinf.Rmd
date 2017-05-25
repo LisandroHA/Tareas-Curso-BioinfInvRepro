@@ -1,0 +1,47 @@
+---
+title: "Untitled"
+author: "Lisandro"
+date: "25 de mayo de 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###cargar los paquetes
+
+```{r}
+library(phangorn)
+
+library(ape)
+```
+
+####cargar las secuencias 
+
+
+```{r}
+x<- read.dna("Padina2.fasta", format = "fasta", skip = 0,
+         nlines = 0, comment.char = ">",
+         as.character = TRUE, as.matrix = FALSE)
+```
+
+
+## análisis de distancias genéticas y elaboración de una matriz 
+
+
+```{r}
+matriz<-dist.dna("x", model = "K80", variance = FALSE,
+         gamma = FALSE, pairwise.deletion = TRUE,
+         base.freq = NULL, as.matrix = TRUE)
+```
+
+
+
+## Análisis mediante Neighbor joinig con la matriz de distancias
+
+```{r}
+treeNJ<-NJ(matriz)
+```
+
+
